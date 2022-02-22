@@ -1,9 +1,9 @@
 
 
-function App() {
+function Login() {
   return (
     <div>hello react</div>
   );
 }
 
-export default App;
+export default Login;
