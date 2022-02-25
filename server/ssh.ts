@@ -23,7 +23,7 @@ export function createSSH(prop: Prop, socket: Socket) {
             });
             stream
                 .on('data', (data: ArrayBuffer) => {
-                    socket.emit('data', new TextDecoder("utf-8").decode(data));
+                    socket.emit('data', new TextDecoder('utf-8').decode(data));
                 })
                 .on('close', function () {
                     ssh.destroy();
@@ -31,14 +31,19 @@ export function createSSH(prop: Prop, socket: Socket) {
         });
     })
         .on('close', () => {
-            socket.emit('data','\r\n*** SSH CONNECTION CLOSED ***\r\n');
+            socket.emit('data', '\r\n*** SSH CONNECTION CLOSED ***\r\n');
             socket.disconnect();
         })
         .on('error', err => {
             console.log(err);
             socket.emit(
                 'data',
-                '\r\n*** SSH CONNECTION ERROR: ' + err.message + ' ***\r\n'
+                '\r\n*** SSH CONNECTION ERROR: ' +
+                    err.message +
+                    ' ***\r\n' +
+                    '\r\n*** SSH CONNECTION ERROR: ' +
+                    'Your account or password is wrong, please reconnect' +
+                    ' ***\r\n'
             );
         })
         .connect({
