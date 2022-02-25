@@ -14,4 +14,4 @@ yarn start
 
 It works like this
 
-![example.png](./example.png)
+![example.png](https://github.com/childrentime/web-ssh/blob/master/example.PNG)
