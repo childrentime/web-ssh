@@ -1,0 +1,20 @@
+:root {
+    --toolH: 80px;
+}
+.shellContainer {
+    height: 100vh;
+    width: 100vw;
+}
+.shellForm {
+    height: var(--toolH);
+    width: 100vw;
+}
+.shellFormStyle {
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.shell {
+    height: calc(100vh - var(--toolH));
+    width: 100%;
+}

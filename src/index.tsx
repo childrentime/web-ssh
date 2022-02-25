@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from './Login';
-import './main.css'
+import Shell from './shell';
+import './main.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Login />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Shell />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
-
