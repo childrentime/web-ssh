@@ -101,11 +101,11 @@ export default function Shell() {
         axios
             .post('http://localhost:8080/fileupload', formData)
             .then(() => {
-                message.info('上传成功');
+                message.info('upload success');
             })
             .catch(err => {
                 message.error(
-                    '上传失败，请刷新重试，或者检查服务器是否开启对应权限'
+                    'If the upload fails, please refresh and retry, or check whether the server has the corresponding permissions enabled'
                 );
             });
     };
@@ -213,13 +213,13 @@ export default function Shell() {
                             <Button
                                 onClick={() => fileInputRef.current?.click()}
                             >
-                                上传文件
+                                Upload File
                             </Button>
                             <Button
                                 onClick={() => disconnect()}
                                 style={{ marginLeft: 20 }}
                             >
-                                断开连接
+                                Disconnect
                             </Button>
                         </div>
                     )}
