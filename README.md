@@ -14,4 +14,4 @@ yarn start
 
 It works like this
 
-![example.png](example.png)
+![example.png](./example.png)
